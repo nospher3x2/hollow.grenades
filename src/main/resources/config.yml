@@ -1,0 +1,6 @@
+settings:
+  general:
+    distraction-time: 15 # in seconds (distraction grenade duration)
+  price:
+    distraction: 200
+    explosive: 200
