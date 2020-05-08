@@ -41,8 +41,7 @@ public enum GrenadeType {
                     "§aGranada Explosiva"
             ).lore(
                     "§7A granada de explosão causa um alto dano",
-                    "§7aos mobs que estão em volta dela, além de",
-                    "§7deixar o chão em chamas por alguns segundos."
+                    "§7aos mobs que estão em volta dela."
             ).setFireworkColor(
                     Color.RED
             ).hideAttributes(),

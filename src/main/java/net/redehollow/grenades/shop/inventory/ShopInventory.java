@@ -20,17 +20,16 @@ public class ShopInventory {
     public static InventoryBuilder getInventory() {
         InventoryBuilder inventory = new InventoryBuilder(4, "Loja");
 
+
+
         Arrays.stream(GrenadeType.values()).forEach(grenadeType -> {
             ItemBuilder item = grenadeType.getItem();
             List<String> lore = item.build().getItemMeta().getLore();
             double price = HollowGrenades.getInstance().getConfig().getDouble("settings.price." + grenadeType.toString().toLowerCase());
-            lore.add(
-                    String.format(
-                            "§fPreço: §e%s pepitas",
-                            price
-                    )
-            );
-            item.lore(lore);
+            item.lore(lore + "", String.format(
+                    "§fPreço: §e%s pepitas",
+                    price
+            ));
 
             inventory.setItem(grenadeType.getSlot(), item.setConsumer(event -> {
                 Player player = (Player) event.getWhoClicked();
